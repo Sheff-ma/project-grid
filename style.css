@@ -10,7 +10,7 @@ body{
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto;
-    gap: 10px;
+    gap: 20px;
     margin: 20px;
 }
 .container > div{
@@ -29,10 +29,12 @@ body{
 }
 .headSection{
     display: flex;
+    z-index: 2;
 }
 .img1{
     border-radius: 50%;
-    padding-right: 10px;
+    padding-right: 20px;
+    z-index: 1;
 }
 .content2{
     background: #201c2d;
@@ -54,8 +56,8 @@ body{
     border-radius: 12px;
     color: #fff;
 }
-.text h2 > p{
-    margin: 20px 0 0 10px;
+.text{
+    padding-top: 10px;
 }
 .p-1{
     font-size: 20px;
@@ -64,6 +66,29 @@ body{
 }
 .p-2{
     font-size: 16px;
-    margin: 10px 20px 0 20px;
-    line-height: 1.5;
+    margin: 10px 20px;
+    line-height: 1.2;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .content1, .content2, .content3, .content4, .content5 {
+        width: 100%;
+    }
+    .img2 {
+        float: none;
+        margin-top: 0;
+    }
+    .headSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .img1 {
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
 }
