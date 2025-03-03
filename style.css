@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background: #808080;
+    background: #e8e8e8;
 }
 .container{
     display: grid;
@@ -18,18 +18,22 @@ body{
     text-align: justify;
 }
 .content1{
+    z-index: 1000;
     grid-column: span 2;
     background: #942cfc;
     border-radius: 12px;
     color: #fff;
 }
 .img2{
+    position: absolute;
     float: right;
-    margin-top: -60px;
+    top: 25px;
+    left: 30%;
+    z-index: -1;
 }
 .headSection{
     display: flex;
-    z-index: 2;
+    z-index: 3;
 }
 .headSection img{
     border-radius: 50%;
@@ -79,8 +83,10 @@ body{
         width: 100%;
     }
     .img2 {
+        position: fixed;
         float: none;
         margin-top: 0;
+        left: 60%;
     }
     .headSection {
         flex-direction: column;
